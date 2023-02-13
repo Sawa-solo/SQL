@@ -1,100 +1,8 @@
 create table employees(
 id serial primary key,
-employee_name Varchar(50) not null
-);
+employee_name Varchar(50) not null);
 
 select * from employees;
-
-
-create table salaryy (
-id serial primary key,
-monthly_salary int not null
-);
-
-select * from salaryy;
-
-create table employee_salary (
-id Serial  primary key,
-employee_id Int not null unique,
-salary_id Int not null
-);
-
-select * from employee_salary
-order by employee_id;
-
-
-create table roless (
-id serial primary key,
-role_name int not null unique
-);
-
-select * from roless;
-
-alter table roless
-alter column role_name type varchar(30);
-
-create table roles_employee (
-id serial primary key,
-employee_id int not null unique,
- role_id Int not null,
- foreign key (employee_id)
-    references employees (id),
- foreign key (role_id)
-    references roless (id)
- );
-
-
-select *from roles_employee;
-
-
-insert into roless (role_name)
-values ('Junior Python developer'),
-       ('Middle Python developer'),
-       ('Senior Python developer'),
-       ('Junior Java developer'),
-       ('Middle Java developer'),
-       ('Senior Java developer'),
-       ('Junior JavaScript developer'),
-       ('Middle JavaScript developer'),
-       ('Senior JavaScript developer'),
-       ('Junior Manual QA engineer'),
-       ('Middle Manual QA engineer'),
-       ('Senior Manual QA engineer'),
-       ('Project Manager'),
-       ('Designer'),
-       ('HR'),
-       ('CEO'),
-       ('Sales manager'),
-       ('Junior Automation QA engineer'),
-       ('Middle Automation QA engineer'),
-       ('Senior Automation QA engineer');
-       
-       
-
-
-
-      
-
-       
-insert into salaryy (monthly_salary)
-values (1000),
-(1100),
-(1200),
-(1300),
-(1400),
-(1500),
-(1600),
-(1700),
-(1800),
-(1900),
-(2000),
-(2100),
-(2200),
-(2300),
-(2400),
-(2500);
-
-
 
 insert into employees (employee_name)
 values ('Reggie Batey'), 
@@ -168,6 +76,37 @@ values ('Reggie Batey'),
 ('Andrea Croes'), 
 ('Amanda Riley');
 
+create table salaryy (
+id serial primary key,
+monthly_salary int not null);
+
+select * from salaryy;
+
+insert into salaryy (monthly_salary)
+values (1000),
+(1100),
+(1200),
+(1300),
+(1400),
+(1500),
+(1600),
+(1700),
+(1800),
+(1900),
+(2000),
+(2100),
+(2200),
+(2300),
+(2400),
+(2500);
+
+create table employee_salary (
+id Serial  primary key,
+employee_id Int not null unique,
+salary_id Int not null);
+
+select * from employee_salary;
+
 insert into employee_salary (employee_id,salary_id)
 values (1,4),
        (2,11),
@@ -210,10 +149,48 @@ values (1,4),
        (29,3),
        (30,8);
        
-      
-insert into employee_salary (employee_id,salary_id)
-values (7,4),
-       (8,5);
+create table roless (
+id serial primary key,
+role_name int not null unique);
+
+select * from roless;
+
+alter table roless
+alter column role_name type varchar(30);
+
+insert into roless (role_name)
+values ('Junior Python developer'),
+       ('Middle Python developer'),
+       ('Senior Python developer'),
+       ('Junior Java developer'),
+       ('Middle Java developer'),
+       ('Senior Java developer'),
+       ('Junior JavaScript developer'),
+       ('Middle JavaScript developer'),
+       ('Senior JavaScript developer'),
+       ('Junior Manual QA engineer'),
+       ('Middle Manual QA engineer'),
+       ('Senior Manual QA engineer'),
+       ('Project Manager'),
+       ('Designer'),
+       ('HR'),
+       ('CEO'),
+       ('Sales manager'),
+       ('Junior Automation QA engineer'),
+       ('Middle Automation QA engineer'),
+       ('Senior Automation QA engineer');
+
+create table roles_employee (
+id serial primary key,
+employee_id int not null unique,
+ role_id Int not null,
+ foreign key (employee_id)
+    references employees (id),
+ foreign key (role_id)
+    references roless (id));
+
+
+select *from roles_employee;
 
 insert into roles_employee (employee_id,role_id)
 values (1,4),
