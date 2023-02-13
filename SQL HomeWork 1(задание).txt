@@ -1,4 +1,4 @@
-SQL_DDL HW 1 
+SQL HomeWork 1
 Первая часть.
 
 
