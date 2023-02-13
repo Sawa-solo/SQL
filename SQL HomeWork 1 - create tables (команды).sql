@@ -1,3 +1,4 @@
+
 create table employees(
 id serial primary key,
 employee_name Varchar(50) not null);
@@ -76,6 +77,8 @@ values ('Reggie Batey'),
 ('Andrea Croes'), 
 ('Amanda Riley');
 
+
+
 create table salaryy (
 id serial primary key,
 monthly_salary int not null);
@@ -99,6 +102,8 @@ values (1000),
 (2300),
 (2400),
 (2500);
+
+
 
 create table employee_salary (
 id Serial  primary key,
@@ -148,7 +153,9 @@ values (1,4),
        (77,1),
        (29,3),
        (30,8);
-       
+ 
+ 
+ 
 create table roless (
 id serial primary key,
 role_name int not null unique);
@@ -179,6 +186,8 @@ values ('Junior Python developer'),
        ('Junior Automation QA engineer'),
        ('Middle Automation QA engineer'),
        ('Senior Automation QA engineer');
+
+
 
 create table roles_employee (
 id serial primary key,
