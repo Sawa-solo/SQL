@@ -243,7 +243,5 @@ values (1,4),
        (55,14),
        (49,15);
 
-Созданные таблицы и связи между ними
 
-![](https://github.com/Sawa-solo/SQL/blob/604d243dd4d8647af673a2cdc28310fb04b49e93/table%20relation.jpg)
 
