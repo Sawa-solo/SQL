@@ -10,4 +10,7 @@
 После создания и заполнения таблиц необходимо было написать ряд различных SQL-запросов на вывод данных из этих таблиц.
 
 ### Другие мои репозитории
-[Postman](https://github.com/Sawa-solo/Postman.git)
+* [Postman](https://github.com/Sawa-solo/Postman.git)
+* [Terminal](https://github.com/Sawa-solo/Terminal.git)
+* [XML](https://github.com/Sawa-solo/XML.git)
+* [JSON](https://github.com/Sawa-solo/JSON.git)
